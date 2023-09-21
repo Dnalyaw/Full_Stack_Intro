@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert(prompt("What is your name?"));
+        confirm("Do you want to continue?");
+        console.log('debugging');
+
+        var x = 5;
+        var y = 9;
+        var z = x + y;
+        console.log(z);
+
+        var txt = "console"
+        var sentence = `hello ${txt}`;
+        var sentence2 = "bye " + txt;
+
+        var value = true;
+        var notvalue = !value;
+        console.log(notvalue);
+        //logs false
+
+        var friends = 0;
+
+        console.log(friends=="0")
+        //actually will return true even though one is a string and one is an integer
+
+        if(friends <= 5) {
+            console.log("you don't have many friends")
+        } else if(friends <= 100) {
+            console.log("you have a decent amount of friends")
+        } else {
+            console.log("you have a lot of friends dang")
+        }
+
+        var repeat = 10;
+        while (repeat > 0) {
+            console.log(repeat);
+            repeat -= 1;
+        }
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i)
+        }
+
+        function addTwo(number) {
+            return number + 2;
+        }
+
+        var finalAnswer = addTwo(5);
+        console.log(finalAnswer); //returns 7
+        /*
+        big comment
+        to put more informatio
+        */
+
+        let name = prompt("What is your birthday?")
+        let myBday = "November 17"
+        if (name != myBday){
+            alert(name + "is not my Birthday")
+        } else {
+            alert(name + "is my Birthday too!!")
+        }
+
+        let password = prompt("Enter Password");
+        let attempts = 0;
+
+        while(password != "1234") {
+            attempts++;
+            if (attempts >= 3) {
+                alert("Too many attempts");
+                break;
+            }
+            password = prompt("Enter password")
+        }
+
+        for(let attempt = 1; attempt < 5; attempt++){
+            password = prompt("Enter password");
+            if (password != "secret") {
+                alert("That's not correct");
+            } else {
+                alert("Congrats");
+            }
+
+        }        
+
+        if (name != null) {
+            //if they did not put anything into the name prompt
+        }
+        let correctPassword = "heyo";
+        function ask(password) {
+            var password = prompt("Wha's the password");
+            if (password === correctPassword) {
+                alert("Correct");
+                return true;
+            } else {
+                return false;
+            }
+        }
+        ask("1234")
+
+        const phrase = "lets everyone else know that this is unchangable";
+        console.log(phrase.toUpperCase());
+
+        let v = Math.floor(4.3);
+        let a = Math.round(4.5);
+
+        let substring = "hello world".substring(6,11)
+        let type = typeof "efkowpkfo"; //returns string
+
+        //dictionaries
+        const person = {
+            name: "wayland",
+            city:"SF",
+            birthday: prompt("what your Bday again?"),
+        };
+        console.log(person.city)
+
+        var JSON = JSON.stringify(person);
+        // this will print the actual code of the entire dict
+        // JSON.parse does the opposite
+
+        var array = ["uno", "dos", "tres"];
+        var biggerArray = [...array, "cuatro", "cinco"] // adds everything from previous list
+
+        let user = {
+            ...person,
+            age: 68,
+        }
+
+        let addVars = (arg1, arg2) => {
+            return arg1 + arg2;
+        }
+
+
+
+        
+
+    </script>
+    <!--alerts the user-->
+</body>
+</html>

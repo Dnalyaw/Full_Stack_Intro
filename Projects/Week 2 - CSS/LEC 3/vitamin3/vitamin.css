@@ -1,0 +1,105 @@
+/** Question 1 */
+.container-1 {
+  /** YOUR CODE HERE */
+  display: flex;
+  flex-direction: row; /*Aligns all items in rows*/
+  justify-content: center; /*centers horizontally*/
+}
+
+.container-1 > div {
+  /** YOUR CODE HERE */
+}
+
+/** Question 2 */
+.container-2 {
+  /** YOUR CODE HERE */
+  display: flex;
+  justify-content: center;
+
+}
+
+.container-2 > div:first-child {
+  /** YOUR CODE HERE */
+  width: 150px;
+  flex: initial;
+}
+
+.container-2 > div {
+  /** YOUR CODE HERE */
+  flex: 1;
+}
+
+/** Question 3 */
+.container-3 {
+  /** YOUR CODE HERE */
+}
+
+.container-3 > div {
+  /** YOUR CODE HERE */
+  max-width: 250px;
+  margin: auto;
+}
+
+/** Question 4 */
+.container-4 {
+  /** YOUR CODE HERE */
+  display: flex;
+  flex-direction: column;
+}
+
+.container-4 > div:first-child {
+  flex: initial; /*keeps the height and width*/
+  height: 60px;
+}
+
+.container-4 > div {
+  /** YOUR CODE HERE */
+  flex: 1;
+}
+
+/** Question 5 */
+.container-5 {
+  /** YOUR CODE HERE */
+  display: flex;
+  flex-direction: column;
+}
+
+.container-5 > :nth-child(1) {
+  /** YOUR CODE HERE */
+  position: sticky;
+  top: 0px;
+  z-index: 5;/*for some reason the sticky goes behind the other div*/
+
+}
+
+.container-5 > :nth-child(2) {
+  /** YOUR CODE HERE */
+  display: flex;
+  flex-direction: row;
+  background: transparent !important;
+}
+
+.container-5 > :nth-child(2) > :nth-child(1) {
+  /** YOUR CODE HERE */
+  width: 100px;
+  flex: initial;
+}
+
+.container-5 > :nth-child(2) > :nth-child(2) {
+  /** YOUR CODE HERE */
+  flex: 1;
+}
+
+.container-5 :nth-child(3) {
+  /** YOUR CODE HERE */
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        /*
+Positioning
+Relative: Moves the box relative to where it was when html put it there
+Absolute: adjust from parent's position, and starts at the top and left
+Fixed: Relative to viewport, and will not be affected by scrolling
+Sticky: Relative until a certain point, then fixed
+*/
+.relative {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top: 20px;
+    left: 300px;
+}
+
+.absolute {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+}
+
+.fixed {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: fixed;
+    top: 220px;
+    left: 150px;
+}
+
+/* 
+Display
+
+Flex - allows you to use the flex properties
+    - flex-direction: the direction of the child elements
+    - justify-content: justifies them to be be centered vertically in the div
+    - align-items: aligns them horizontally in div
+    - 
+Flexbox - same as flex
+
+None - Deletes the div
+Hidden - Deletes the div, but not the space
+
+
+Transform:
+ - scale changes the size
+ - rotate
+ - translate is just like the position relative movement
+*/
+
+
+.flex {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    left: 200px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    transition:  background-color 1s;
+    transition:  transform 1s;
+}
+
+h1 {
+    float: right;
+}
+
+div:hover {
+    background-color: black;
+    transform: scale(2);
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        display: none;
+    }
+}
+
+input {
+    background-color: yellow;
+}
+
+input:focus {
+    background-color: blueviolet;
+}
+
+input:first-child {
+    background-color: black;
+}
+    </style>
+    <div class="relative"></div>
+    <div class="absolute"></div>
+    <div class="fixed"></div>
+    <div class="flex">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    </div>
+    <h1>Practice</h1>
+    <input class="input">
+        <li>hi 1</li>
+        <li>hi 2</li>
+        <li>hi 3</li>
+        <li>hi 4</li>
+    </input>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!--Links to the stylesheet that is in the other file-->
+</head>
+<body>
+    <p style="
+        color: red; 
+        font-weight: bold;
+        background-color: mediumpurple;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 10px;
+        ">Some text</p>
+    <!--Style adds css styles-->
+    <h1 style=
+    "color: blue;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    border-style: lime 10px solid;">
+    Welcome to my page</h1>
+    <p style="opacity: 0.5;">What's up</p>
+
+    <style>
+        *{ /*This affects every element on the page*/
+
+        }
+        #myText {
+            color: orange;
+            font-size: 20px;
+            font-family: sans-serif;
+            text-align: center;
+        } 
+        .randoClass {
+            background-color: yellow;
+        }
+
+        h2 {
+            background-color: blueviolet;
+        }
+    </style>
+    <p id="myText" class="randoClass">Testing</p>
+    <h2>This is an h2</h2>
+    <!--CSS usually picks the last if multple classes or ids are used-->
+    <!--Inline has the width and height set automatically to fit contents, these cannot be changed-->
+    <!--Block elements have width as the screen and height automatically, both can be overriden-->
+    <!--Inline Block is just like inline, just that the width and height can be overridden-->
+    <!--
+        Sizing Units:
+        px: pixels
+        %: percentage of parent element
+        vh/vw: size relative to the viewport height
+
+        Colors:
+        rgba: formatted as a list wrapped in parenthesis
+
+        Margin and Padding:
+        Padding adds space around an element but inside the border
+        Margin adds space around but outside te border
+    -->
+    <style>
+        body {/*html pages automatically put a little bit of space in between elements, this will stop that*/
+            margin: 0;
+        }
+        div {
+            display: inline-block; /*try changing this with block, inline block, and inline */
+            width: 100px;
+            height: 50px;
+            background-color: rgba(21, 177, 112, 0.5); /*The a means transparency*/
+            margin: 15px;
+            padding: 30px;
+        }
+
+        .important, .red { /*If the class is both important OR bold */
+            color: red;
+        }
+
+        .important.red { /*If the class is both important AND bold */
+            color: red;
+        }
+        .parent .child { /*Applies to the child element which is inside the parent specified*/
+            color: lightblue;
+        }
+        .parent>.child { /*Applies to the child element which is exactly one level deeper inside the parent specified*/
+            color: lightblue;
+        }
+    </style>
+    <div>Hello 1</div> <!--would tab down but due to the inline, doesn't tab down and height and width do not change-->
+    <div>Hello 2</div><div>Hello 3</div>
+</body>
+</html>
