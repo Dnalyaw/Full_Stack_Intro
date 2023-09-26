@@ -1,0 +1,115 @@
+<!DOCTYPE html><!--Called a DOM-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>oski</h1>
+    <h2 id="hi">hi</h2>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <!--Different ways to set up buttons-->
+    <button id = "blueButton">blue</button>
+    <button onclick="changeColorRed()">red</button>
+
+    <br>
+    <br>
+    <input placeholder="Type a color and click button" id="newColor">
+    <br>
+    <br>
+    <button onclick="changeColorChoice()">Change Color</button>
+
+    
+    <script>
+        const firstChange = document.querySelector("h1");
+        firstChange.innerHTML = "Oski is mid";
+        
+        hi = document.getElementById("hi");
+        hi.style.backgroundColor = "red";
+
+        const listStorage = document.querySelectorAll("li");
+        for(let i = 0; i < listStorage.length; i++) {
+            listStorage[i].innerHTML = "yooooo";
+            listStorage[i].style.fontFamily = "Comic Sans MS";
+        }
+
+        //Listeners
+
+        function changeColorBlue() {
+            document.querySelector("html").style.backgroundColor = "blue";
+        }
+        function changeColorRed() {
+            document.querySelector("html").style.backgroundColor = "red";
+        }
+
+        function changeColorChoice() { //
+            changeColor(document.getElementById("newColor").value);
+        }
+
+        function changeColor(color) {
+            document.querySelector("html").style.backgroundColor = color;
+        }
+
+        document.getElementById("blueButton").addEventListener("click", changeColorBlue);
+        
+        document.getElementById("redButton").addEventListener("click", changeColorRed);
+    </script>
+
+
+
+
+
+    <div height="500px" width="500px"></div>
+    <br>
+    <input placeholder="type into me!" class="input-to-copy" />
+    <p class="p-to-copy-to">Nothing has happened yet.</p>
+    <script>
+    const input = document.querySelector('.input-to-copy');
+    const paragraph = document.querySelector('.p-to-copy-to');
+
+    //when the key goes up,the text changes
+    //changing "keyup" to "change" happens when after the input is changed when the person clicks on something else
+    input.addEventListener('keyup', function () {
+        paragraph.innerText = input.value;
+    });
+
+    //Cookies, those anooying things saying that your data is being stored
+    document.cookie = 'name=Brian';
+    console.log(document.cookie); // "name=Brian"
+
+    document.cookie = 'favoriteFood=ice cream';
+    console.log(document.cookie); // "name=Brian; favoriteFood=ice cream"
+
+    //  document.cookie = 'name=Brian; expires=Fri, 21 Jul 2025 23:48:25 GMT; path=/';
+
+    function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
+
+    </script>
+</body>
+</html>
