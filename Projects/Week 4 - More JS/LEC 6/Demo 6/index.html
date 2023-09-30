@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Dog {
+            constructor(name) {
+                this.name = name;
+            }
+
+            bark() {
+                console.log(name + ": Woof");
+            }
+        }
+        //console.log(d.name());
+
+        d = new Dog("Peanut");
+        d.bark();
+
+        var myDict = {//var preshows this in inspect, but let doesn't
+            name: "John",
+            myFunc: function() {
+                console.log(this)
+            }
+        }
+        myDict.myFunc();//prints out the dictionary
+
+        setTimeout(function() {
+            console.log("setTimeout");
+        }, 1000);
+
+        function callback (funct) {
+            setTimeout(() => {
+                funct();
+                funct();
+
+            }, 2000);
+        }
+
+        callback(console.log("What's up"));
+
+        /*
+        Promises help when the callbacks are overwhelming
+        */
+        fetch("https://fullstackdecal.com/docs/Lessons/Lesson7")
+            .then(response => response.text())
+            .then(text => console.log(text))
+            .catch(error => console.error(error))
+
+        async function main() {
+            let res = await fetch("https://fullstackdecal.com/docs/Lessons/Lesson7")
+            let text = await res.text();
+            console.log(text);
+        }
+
+        function callAfterASecond() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, 1000);
+            })
+        }
+
+        async function main2() {
+            await callAfterASecond();
+            console.log("hello");
+        }
+
+        main2();//wait a second and then says hello
+
+        
+
+    </script>
+</body>
+</html>
