@@ -1,0 +1,22 @@
+Postman  simplifies creating, using, and testing APIs with a ui 
+
+APIs (Application Programming Interfaces)
+- Enables code to ttalk to code
+- enables services to counicate with each other
+- businesses to open up product features
+
+In Postman
+- get: retrieves information
+- post: sending information
+- put/patch: updating
+- delete
+
+Parameters
+- add specificity to a path 
+- query parameters (?) and path parameters (/)
+
+Headers (for metadata)
+Body (for data payload)
+
+Responses
+- status codes
