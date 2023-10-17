@@ -14,6 +14,23 @@ function App() {
       setCount(count + 1);
   }
 
+  {/** this just sets the default of the name that is used in p, sets the state to a default valuegf */}
+  const [name, setName] = useState("Wayland");
+
+  const updateName = (event) => {
+    {/** event is a react made thing that looks at the HTML tag that the function was called in */}
+    setName(event.target.value);
+  }
+
+
+  return (
+    <div>
+      {/** In this app, change in value causes updateName() to occur */}
+      <input type="text" onChange={updateName}/>
+        <p>Hello {name}!</p>
+    </div>
+  )
+
   return (
     <>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMPNdlwYyvncvJnwmSfhbhb71WYf_D2L4a1443WO4&s"></img>

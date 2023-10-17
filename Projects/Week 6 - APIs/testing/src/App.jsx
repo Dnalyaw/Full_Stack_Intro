@@ -1,43 +1,33 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-
-const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <div>Hello world</div>,
-    },
-    {
-      path: "/about",
-      element: <div>About</div>,
-    },
-]);
-
-
 
 function App() {
-  const [fact, setFact] = useState("Loading...");
-
-  useEffect(() => {
-    fetch("https://www.boredapi.com/api/activity")
-    .then(res => res.json())
-    .then(data => setFact(data.activity));
-  }, [])
+  const [count, setCount] = useState(0)
 
   return (
     <>
-        <RouterProvider router={router} />
-        <button>
-        Generate something to do
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
         </button>
-        <br></br>
-        {fact}
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
