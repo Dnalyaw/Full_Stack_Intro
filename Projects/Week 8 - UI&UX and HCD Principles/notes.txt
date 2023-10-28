@@ -1,0 +1,8 @@
+UX(User experience) vs UI(User interface)
+- UX is how it feels
+    - Human Centered Design Process
+        - research, synthesis
+- UI is how it works
+    - core building blocks, designed with intention
+
+*use FIGMA
