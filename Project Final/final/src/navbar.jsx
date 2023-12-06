@@ -6,7 +6,7 @@ export default function Navbar() {
       <ul class="navbar-links">
           <a><li>John</li>
           <br></br>
-          <li>Admin</li></a>
+          <li>Student</li></a>
       </ul>
     </nav>
     <div id="menu">
